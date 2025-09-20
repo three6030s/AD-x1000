@@ -102,7 +102,7 @@ export const pelleUpgrades = {
   },
   dimBoostResetsNothing: {
     id: 7,
-    description: "Dimension Boosts no longer reset anything",
+    description: "Dimension Boosts and Antimatter Galaxies no longer reset anything",
     cost: 1e11,
     formatCost,
   },
@@ -126,8 +126,8 @@ export const pelleUpgrades = {
   },
   galaxyNoResetDimboost: {
     id: 11,
-    description: "Galaxies no longer reset Dimension Boosts",
-    cost: 1e16,
+    description: "This upgrade used to make Galaxies no longer reset Dimension Boosts, but that was moved to a different (and much cheaper) upgrade",
+    cost: 1e160,
     formatCost
   },
   replicantiAutobuyers: {
@@ -192,7 +192,7 @@ export const pelleUpgrades = {
   },
   replicantiGalaxyEM40: {
     id: 22,
-    description: "Replicanti Galaxies no longer reset anything they normally reset",
+    description: "Replicanti Galaxies no longer reset anything",
     cost: 1e30,
     formatCost,
   }

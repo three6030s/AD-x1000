@@ -233,8 +233,9 @@ function askEternityConfirmation() {
 
 export function gainedEternities() {
   return Pelle.isDisabled("eternityMults")
-    ? new Decimal(1)
+    ? new Decimal(1e3)
     : new Decimal(getAdjustedGlyphEffect("timeetermult"))
+      .times(1e3)
       .timesEffectsOf(RealityUpgrade(3), Achievement(113))
       .pow(AlchemyResource.eternity.effectValue);
 }

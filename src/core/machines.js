@@ -11,13 +11,13 @@ export const MachineHandler = {
 
   get realityMachineMultiplier() {
     return ShopPurchase.RMPurchases.currentMult * Teresa.rmMultiplier * Effects.max(1, PerkShopUpgrade.rmMult) *
-      getAdjustedGlyphEffect("effarigrm") * Achievement(167).effectOrDefault(1);
+      getAdjustedGlyphEffect("effarigrm") * Achievement(167).effectOrDefault(1) * 1e3;
   },
 
   get uncappedRM() {
     let log10FinalEP = player.records.thisReality.maxEP.plus(gainedEternityPoints()).log10();
     if (!PlayerProgress.realityUnlocked()) {
-      if (log10FinalEP > 8000) log10FinalEP = 8000;
+    //  if (log10FinalEP > 8000) log10FinalEP = 8000;
       if (log10FinalEP > 6000) log10FinalEP -= (log10FinalEP - 6000) * 0.75;
     }
     let rmGain = DC.E3.pow(log10FinalEP / 4000 - 1);
@@ -61,7 +61,7 @@ export const MachineHandler = {
 
   // Time in seconds to reduce the missing amount by a factor of two
   get scaleTimeForIM() {
-    return 60 / ImaginaryUpgrade(20).effectOrDefault(1);
+    return 60 / ImaginaryUpgrade(20).effectOrDefault(1) / 1e3;
   },
 
   gainedImaginaryMachines(diff) {

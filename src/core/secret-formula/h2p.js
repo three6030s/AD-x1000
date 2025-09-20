@@ -883,8 +883,7 @@ also be repeatedly bought, but eventually reaches a cap.
     }, {
       name: "Reality",
       info: () => `
-When you reach ${formatPostBreak(DC.E4000)} EP and have completed the first
-${formatInt(13)} rows of Achievements, you will be able to purchase the Time Study that unlocks Reality.
+When you reach ${formatPostBreak(DC.E4000)} EP, you will be able to purchase the Time Study that unlocks Reality.
 Unlocking it opens a new tab, where you can find the button to make a new Reality. Starting a new Reality
 will reset almost the entire game up to this point, but in exchange gives
 you a new currency known as Reality Machines, a Glyph, and a Perk Point.
@@ -1560,8 +1559,8 @@ Each Alchemy Resource has a unique effect, which you can view on the Alchemy tab
 <br>
 In addition to all their other properties, Glyphs now have a <i>refinement value</i> which determines how much of
 its associated Alchemy Resource it is worth. This value is based on the cube of the Glyph's level, scaled
-so that level ${formatInt(10000)} Glyphs correspond to ${formatInt(10000)} Alchemy Resources. A single Glyph itself,
-however, only gives ${formatPercents(GlyphSacrificeHandler.glyphRefinementEfficiency)} of this value when refined.
+so that level ${formatInt(10000)} Glyphs correspond to ${formatInt(10000)} Alchemy Resources. A single Glyph itself
+gives ${formatPercents(GlyphSacrificeHandler.glyphRefinementEfficiency)} of this value when refined.
 These are values for ${formatPercents(1)} rarity Glyphs; Glyphs of lower rarity still have the same cap but give
 proportionally less resources. For example, a ${formatPercents(0.5)} rarity Glyph will give only half as much.
 <br>
@@ -1629,7 +1628,7 @@ if you ever surpass your previous highest uncapped RM amount.
 <br>
 <b>Current iM</b> - Over time your current iM will passively rise towards your iM cap, in a way that slows down
 exponentially as you approach the cap. By default iM slows down at a rate where the amount you are <i>missing</i>
-(ie. your cap minus your current amount) is cut in half every minute. This growth rate is unaffected by any
+(ie. your cap minus your current amount) is cut in half every ${format(60)} milliseconds. This growth rate is unaffected by any
 modifiers to game speed.
 <br>
 <br>
@@ -1767,6 +1766,7 @@ ${Pelle.isDoomed
       tab and all of your best Challenge times. Inside Doomed Realities, multiple upgrades, Time Studies, Challenge and
       Celestial rewards, Perks, and other game mechanics are disabled or grant no reward.
       You can view the "Show effects in Doomed Reality" in Pelle tab for further information.
+      An exception to this is any effects from the mod.
       <br>
       <br>
       Remnants are a new currency gained on Armageddon resets. Remnant gain is based on your best ever antimatter,
@@ -1803,7 +1803,7 @@ Each Pelle Strike also unlocks a Rift bar.
 <br>
 <br>
 Rift bars can be filled by clicking them to toggle between "Idle" and "Filling", although only two Rifts can be
-"Filling" at any given time. When active, Rifts consume ${formatInt(3)}% of a Rift-specific resource per second. Each
+"Filling" at any given time. When active, Rifts consume ${formatInt(30)}% of a Rift-specific resource per second. Each
 Rift offers a Rift-specific effect which are based on the total amount filled.
 ${PelleStrikes.eternity.hasStrike
     ? `An exception for this is Decay/Collapse/Disarray, whose effect gets capped once you have drained a total of

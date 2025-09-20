@@ -198,7 +198,7 @@ class AlchemyReaction {
   }
 
   get reactionEfficiency() {
-    return this.isReality ? 1 : AlchemyResource.synergism.effectValue;
+    return this.isReality ? 2.5 : AlchemyResource.synergism.effectValue;
   }
 
   get reactionProduction() {
@@ -217,8 +217,8 @@ class AlchemyReaction {
       for (const reagent of this._reagents) {
         reagent.resource.amount -= reactionYield * reagent.cost;
       }
-      // The minimum reaction yield is 0.05 so the cap is actually reached
-      const effectiveYield = Math.clampMin(reactionYield * this.reactionProduction, 0.05);
+      // The minimum reaction yield is 0.05 so the cap is actually reached // Actually 0.5 // Actually 5 // Actually 0.5 again and reality reaction efficiency is x2.5
+      const effectiveYield = Math.clampMin(reactionYield * this.reactionProduction, 0.5);
       this._product.amount = Math.clampMax(this._product.amount + effectiveYield, cap);
     }
   }

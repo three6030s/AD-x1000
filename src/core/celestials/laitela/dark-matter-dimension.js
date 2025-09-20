@@ -75,6 +75,7 @@ export class DarkMatterDimensionState extends DimensionState {
   get powerDM() {
     if (!this.isUnlocked) return new Decimal(0);
     return new Decimal(1 + 2 * Math.pow(1.15, this.data.powerDMUpgrades))
+      .times(1e3)
       .times(Laitela.realityReward)
       .times(Laitela.darkMatterMult)
       .times(this.commonDarkMult)
@@ -91,6 +92,7 @@ export class DarkMatterDimensionState extends DimensionState {
       Math.pow(1.005, this.data.powerDEUpgrades)) * tierFactor / 1000)
       .times(this.commonDarkMult)
       .times(Math.pow(POWER_DE_PER_ASCENSION, this.ascensions))
+      .times(1e3)
       .timesEffectsOf(
         SingularityMilestone.darkEnergyMult,
         SingularityMilestone.realityDEMultiplier,

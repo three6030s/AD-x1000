@@ -1,7 +1,7 @@
 import { DimensionState } from "./dimension";
 
 export function infinityDimensionCommonMultiplier() {
-  let mult = new Decimal(ShopPurchase.allDimPurchases.currentMult)
+  let mult = new Decimal(ShopPurchase.allDimPurchases.currentMult).times(1e3)
     .timesEffectsOf(
       Achievement(75),
       TimeStudy(82),
@@ -129,7 +129,7 @@ class InfinityDimensionState extends DimensionState {
     }
     let production = this.amount;
     if (EternityChallenge(11).isRunning) {
-      return production;
+      return production.times(1e3);
     }
     if (EternityChallenge(7).isRunning) {
       production = production.times(Tickspeed.perSecond);
@@ -139,7 +139,7 @@ class InfinityDimensionState extends DimensionState {
 
   get multiplier() {
     const tier = this.tier;
-    if (EternityChallenge(11).isRunning) return DC.D1;
+    if (EternityChallenge(11).isRunning) return DC.E3;
     let mult = GameCache.infinityDimensionCommonMultiplier.value
       .timesEffectsOf(
         tier === 1 ? Achievement(94) : null,

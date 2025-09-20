@@ -254,6 +254,7 @@ export const Ra = {
   },
   get productionPerMemoryChunk() {
     let res = Effects.product(Ra.unlocks.continuousTTBoost.effects.memories, Achievement(168));
+    res *= 1e3;
     for (const pet of Ra.pets.all) {
       if (pet.isUnlocked) res *= pet.memoryProductionMultiplier;
     }
@@ -370,7 +371,7 @@ export const Ra = {
   },
   get momentumValue() {
     const hoursFromUnlock = TimeSpan.fromMilliseconds(player.celestials.ra.momentumTime).totalHours;
-    return Math.clampMax(1 + 0.005 * hoursFromUnlock, AlchemyResource.momentum.effectValue);
+    return Math.clampMax(1 + 5 * hoursFromUnlock, AlchemyResource.momentum.effectValue); // Normally 1 + 0.005 * hoursFromUnlock...
   },
   quotes: Quotes.ra,
   symbol: "<i class='fas fa-sun'></i>"

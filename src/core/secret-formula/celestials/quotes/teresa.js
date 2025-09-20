@@ -7,6 +7,7 @@ export const teresaQuotes = {
       "We are the Celestials, and we want you to join us.",
       "My name is Teresa, the Celestial Of Reality.",
       "Prove your worth.",
+      "(Tip: Press the escape key to quickly close Celestial Quotes.)",
     ]
   },
   unlockReality: {

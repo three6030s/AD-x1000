@@ -33,8 +33,7 @@ export const perks = {
     label: "START",
     family: PERK_FAMILY.REALITY,
     get description() {
-      return `Remove the achievement requirement from the Reality Study
-      and allow you to choose from ${formatInt(4)} different Glyphs on Reality.`;
+      return `Allow you to choose from ${formatInt(4)} different Glyphs on Reality.`;
     },
     effect: 4,
     layoutPosList: [76596, 80200, 80600, 80200, 80188, 67769],
@@ -44,10 +43,10 @@ export const perks = {
     label: "SAM",
     family: PERK_FAMILY.ANTIMATTER,
     get description() {
-      return `Start every reset with ${format(5e130)} antimatter.`;
+      return `Start every reset with ${format(5e133)} antimatter.`;
     },
-    bumpCurrency: () => Currency.antimatter.bumpTo(5e130),
-    effect: 5e130,
+    bumpCurrency: () => Currency.antimatter.bumpTo(5e133),
+    effect: 5e133,
     layoutPosList: [76559, 80600, 80199, 80600, 82191, 75745],
   },
   startIP1: {
@@ -55,10 +54,10 @@ export const perks = {
     label: "SIP1",
     family: PERK_FAMILY.INFINITY,
     get description() {
-      return `Start every Eternity and Reality with ${format(5e15)} Infinity Points.`;
+      return `Start every Eternity and Reality with ${format(5e18)} Infinity Points.`;
     },
-    bumpCurrency: () => Currency.infinityPoints.bumpTo(5e15),
-    effect: 5e15,
+    bumpCurrency: () => Currency.infinityPoints.bumpTo(5e18),
+    effect: 5e18,
     layoutPosList: [74523, 80599, 79798, 80599, 82594, 91322],
   },
   startIP2: {
@@ -66,10 +65,10 @@ export const perks = {
     label: "SIP2",
     family: PERK_FAMILY.INFINITY,
     get description() {
-      return `Start every Eternity and Reality with ${format(5e130)} Infinity Points.`;
+      return `Start every Eternity and Reality with ${format(5e133)} Infinity Points.`;
     },
-    bumpCurrency: () => Currency.infinityPoints.bumpTo(5e130),
-    effect: 5e130,
+    bumpCurrency: () => Currency.infinityPoints.bumpTo(5e133),
+    effect: 5e133,
     layoutPosList: [62111, 80598, 79797, 80998, 82597, 91690],
   },
   startEP1: {
@@ -77,12 +76,12 @@ export const perks = {
     label: "SEP1",
     family: PERK_FAMILY.ETERNITY,
     get description() {
-      return `Start every Reality with ${formatInt(10)} Eternity Points.`;
+      return `Start every Reality with ${formatInt(1e3)} Eternity Points.`;
     },
-    bumpCurrency: () => Currency.eternityPoints.bumpTo(10),
-    effect: 10,
+    bumpCurrency: () => Currency.eternityPoints.bumpTo(1e3),
+    effect: 1e3,
     automatorPoints: 5,
-    shortDescription: () => `Start with ${formatInt(10)} EP`,
+    shortDescription: () => `Start with ${formatInt(1e3)} EP`,
     layoutPosList: [88915, 80999, 79398, 80598, 82197, 103734],
   },
   startEP2: {
@@ -90,10 +89,10 @@ export const perks = {
     label: "SEP2",
     family: PERK_FAMILY.ETERNITY,
     get description() {
-      return `Start every Reality with ${format(5000)} Eternity Points.`;
+      return `Start every Reality with ${format(5e6)} Eternity Points.`;
     },
-    bumpCurrency: () => Currency.eternityPoints.bumpTo(5000),
-    effect: 5000,
+    bumpCurrency: () => Currency.eternityPoints.bumpTo(5e6),
+    effect: 5e6,
     layoutPosList: [92484, 81398, 78998, 80597, 82200, 102193],
   },
   startEP3: {
@@ -101,12 +100,12 @@ export const perks = {
     label: "SEP3",
     family: PERK_FAMILY.ETERNITY,
     get description() {
-      return `Start every Reality with ${format(5e9)} Eternity Points.`;
+      return `Start every Reality with ${format(5e12)} Eternity Points.`;
     },
-    bumpCurrency: () => Currency.eternityPoints.bumpTo(5e9),
-    effect: 5e9,
+    bumpCurrency: () => Currency.eternityPoints.bumpTo(5e12),
+    effect: 5e12,
     automatorPoints: 10,
-    shortDescription: () => `Start with ${format(5e9)} EP`,
+    shortDescription: () => `Start with ${format(5e12)} EP`,
     layoutPosList: [96459, 81798, 78997, 80596, 82203, 106224],
   },
   startTP: {
@@ -114,11 +113,11 @@ export const perks = {
     label: "STP",
     family: PERK_FAMILY.DILATION,
     get description() {
-      return `After unlocking Dilation, gain ${formatInt(10)} Tachyon Particles.`;
+      return `After unlocking Dilation, gain ${formatInt(1e4)} Tachyon Particles.`;
     },
-    effect: () => (Enslaved.isRunning ? 1 : 10),
+    effect: () => (Enslaved.isRunning ? 1e3 : 1e4),
     automatorPoints: 5,
-    shortDescription: () => `Start with ${formatInt(10)} TP`,
+    shortDescription: () => `Start with ${formatInt(1e4)} TP`,
     layoutPosList: [102120, 81399, 79399, 80197, 81800, 109376],
   },
   antimatterNoReset: {
@@ -258,13 +257,13 @@ export const perks = {
     label: "PEC1",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Auto-complete one Eternity Challenge every ${formatInt(60)} minutes (real-time).
+      return `Auto-complete one Eternity Challenge every ${format(3.6, 0, 1)} seconds (real-time).
               ECs will be completed sequentially, requiring all previous
               ECs to be fully completed before progressing to the next EC.`;
     },
-    effect: 60,
+    effect: 0.06,
     automatorPoints: 5,
-    shortDescription: () => `Auto-complete ECs every ${formatInt(60)} minutes`,
+    shortDescription: () => `Auto-complete ECs every ${format(3.6, 0, 1)} seconds`,
     layoutPosList: [90660, 79402, 81002, 79803, 79397, 46664],
   },
   autocompleteEC2: {
@@ -272,10 +271,10 @@ export const perks = {
     label: "PEC2",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Auto-complete one Eternity Challenge every ${formatInt(40)} minutes (real-time).
-        (${formatInt(20)} minute decrease)`;
+      return `Auto-complete one Eternity Challenge every ${format(2.4, 0, 1)} seconds (real-time).
+        (${format(1.2, 0, 1)} second decrease)`;
     },
-    effect: 40,
+    effect: 0.04,
     layoutPosList: [95485, 79002, 81402, 79804, 79400, 53486],
   },
   autocompleteEC3: {
@@ -283,12 +282,12 @@ export const perks = {
     label: "PEC3",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Auto-complete one Eternity Challenge every ${formatInt(20)} minutes (real-time).
-        (${formatInt(20)} minute decrease)`;
+      return `Auto-complete one Eternity Challenge every ${format(1.2, 0, 1)} seconds (real-time).
+        (${format(1.2, 0, 1)} second decrease)`;
     },
-    effect: 20,
+    effect: 0.02,
     automatorPoints: 10,
-    shortDescription: () => `Auto-complete ECs every ${formatInt(20)} minutes`,
+    shortDescription: () => `Auto-complete ECs every ${format(1.2, 0, 1)} minutes`,
     layoutPosList: [96311, 78602, 81401, 80204, 79403, 61903],
   },
   studyActiveEP: {
@@ -388,9 +387,9 @@ export const perks = {
     label: "IDAS",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Infinity Dimension autobuyers work ${formatX(3)} faster.`;
+      return `Infinity Dimension autobuyers work ${formatX(9)} faster.`;
     },
-    effect: 1 / 3,
+    effect: 1 / 9,
     automatorPoints: 5,
     shortDescription: () => "Faster ID Autobuyers",
     layoutPosList: [74095, 80199, 80198, 81000, 82997, 77720],
@@ -400,9 +399,9 @@ export const perks = {
     label: "REPAS",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Replicanti autobuyers work ${formatX(3)} faster.`;
+      return `Replicanti autobuyers work ${formatX(9)} faster.`;
     },
-    effect: 1 / 3,
+    effect: 1 / 9,
     automatorPoints: 5,
     shortDescription: () => "Faster Replicanti Autobuyers",
     layoutPosList: [57685, 80198, 80197, 80999, 83000, 79297],
@@ -412,9 +411,9 @@ export const perks = {
     label: "DAS",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Dilation Upgrade autobuyers work ${formatX(3)} faster.`;
+      return `Dilation Upgrade autobuyers work ${formatX(9)} faster.`;
     },
-    effect: 1 / 3,
+    effect: 1 / 9,
     automatorPoints: 5,
     shortDescription: () => "Faster Dilation Autobuyers",
     layoutPosList: [113895, 82602, 79402, 79395, 80609, 72715],
@@ -453,9 +452,9 @@ export const perks = {
     label: "DAB",
     family: PERK_FAMILY.AUTOMATION,
     get description() {
-      return `Dilation Upgrade autobuyers buy three times as many Dilation Upgrades at once.`;
+      return `Dilation Upgrade autobuyers buy nine times as many Dilation Upgrades at once.`;
     },
-    effect: 3,
+    effect: 9,
     automatorPoints: 5,
     shortDescription: () => "Dilation Autobuyer bulk",
     layoutPosList: [127384, 81400, 79803, 79399, 81000, 103048],

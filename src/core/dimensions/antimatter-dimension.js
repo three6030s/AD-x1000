@@ -8,6 +8,7 @@ export function antimatterDimensionCommonMultiplier() {
   multiplier = multiplier.times(Achievements.power);
   multiplier = multiplier.times(ShopPurchase.dimPurchases.currentMult);
   multiplier = multiplier.times(ShopPurchase.allDimPurchases.currentMult);
+  multiplier = multiplier.times(1e6);
 
   if (!EternityChallenge(9).isRunning) {
     multiplier = multiplier.times(Currency.infinityPower.value.pow(InfinityDimensions.powerConversionRate).max(1));
@@ -56,7 +57,7 @@ export function getDimensionFinalMultiplierUncached(tier) {
   if (EternityChallenge(11).isRunning) {
     return Currency.infinityPower.value.pow(
       InfinityDimensions.powerConversionRate
-    ).max(1).times(DimBoost.multiplierToNDTier(tier));
+    ).max(1).times(DimBoost.multiplierToNDTier(tier)).times(1e6);
   }
 
   let multiplier = DC.D1;
@@ -571,7 +572,7 @@ class AntimatterDimensionState extends DimensionState {
     const postBreak = (player.break && !NormalChallenge.isRunning) ||
       InfinityChallenge.isRunning ||
       Enslaved.isRunning;
-    return postBreak ? Decimal.MAX_VALUE : DC.E315;
+    return postBreak ? Decimal.MAX_VALUE : DC.E1E7;
   }
 
   get productionPerSecond() {

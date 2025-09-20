@@ -53,8 +53,8 @@ export const normalAchievements = [
     description: "Go Infinite.",
     checkRequirement: () => true,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
-    get reward() { return `Start with ${formatInt(100)} antimatter.`; },
-    effect: 100
+    get reward() { return `Start with ${formatInt(5e5)} antimatter. (this is 5e3x stronger to prevent potential softlocks)`; },
+    effect: 5e5
   },
   {
     id: 22,
@@ -175,8 +175,8 @@ export const normalAchievements = [
     get description() { return `Infinity in under ${formatInt(2)} hours.`; },
     checkRequirement: () => Time.thisInfinityRealTime.totalHours <= 2,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
-    get reward() { return `Start with ${formatInt(5000)} antimatter.`; },
-    effect: 5000
+    get reward() { return `Start with ${formatInt(5e6)} antimatter.`; },
+    effect: 5e6
   },
   {
     id: 38,
@@ -307,8 +307,8 @@ export const normalAchievements = [
     get description() { return `Infinity in ${formatInt(10)} minutes or less.`; },
     checkRequirement: () => Time.thisInfinityRealTime.totalMinutes <= 10,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
-    get reward() { return `Start with ${format(5e5)} antimatter.`; },
-    effect: 5e5
+    get reward() { return `Start with ${format(5e8)} antimatter.`; },
+    effect: 5e8
   },
   {
     id: 55,
@@ -316,8 +316,8 @@ export const normalAchievements = [
     get description() { return `Infinity in ${formatInt(1)} minute or less.`; },
     checkRequirement: () => Time.thisInfinityRealTime.totalMinutes <= 1,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
-    get reward() { return `Start with ${format(5e10)} antimatter.`; },
-    effect: 5e10
+    get reward() { return `Start with ${format(5e13)} antimatter.`; },
+    effect: 5e13
   },
   {
     id: 56,
@@ -515,9 +515,9 @@ export const normalAchievements = [
     checkRequirement: () => Time.thisInfinityRealTime.totalMilliseconds <= 250,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
     get reward() {
-      return `Start with ${format(5e25)} antimatter.`;
+      return `Start with ${format(5e28)} antimatter.`;
     },
-    effect: 5e25
+    effect: 5e28
   },
   {
     id: 81,
@@ -711,8 +711,8 @@ export const normalAchievements = [
     get description() { return `Eternity in under ${formatInt(30)} seconds.`; },
     checkRequirement: () => Time.thisEternity.totalSeconds <= 30,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE,
-    get reward() { return `Start Eternities with ${format(5e25)} Infinity Points.`; },
-    effect: 5e25
+    get reward() { return `Start Eternities with ${format(5e28)} Infinity Points.`; },
+    effect: 5e28
   },
   {
     id: 105,
@@ -1123,7 +1123,7 @@ export const normalAchievements = [
     get description() { return `Reality in under ${formatInt(5)} seconds (game time).`; },
     checkRequirement: () => Time.thisReality.totalSeconds <= 5,
     checkEvent: GAME_EVENT.REALITY_RESET_BEFORE,
-    get reward() { return `${formatPercents(0.1)} chance each Reality of ${formatX(2)} Realities and Perk Points.`; },
+    get reward() { return `${formatPercents(0.1)} chance each Reality of ${formatX(2)} Realities and Perk Points, and the game runs ${formatX(1000)} faster.`; },
     effect: 0.1
   },
   {
@@ -1210,8 +1210,8 @@ export const normalAchievements = [
   {
     id: 166,
     name: "Nicenice.",
-    get description() { return `Get a Glyph with level exactly ${formatInt(6969)}.`; },
-    checkRequirement: () => gainedGlyphLevel().actualLevel === 6969,
+    get description() { return `Get a Glyph with level at least ${formatInt(6969)}.`; },
+    checkRequirement: () => gainedGlyphLevel().actualLevel >= 6969,
     checkEvent: GAME_EVENT.REALITY_RESET_BEFORE,
     get reward() { return `+${formatInt(69)} to Glyph level.`; },
     effect: 69
@@ -1277,7 +1277,7 @@ export const normalAchievements = [
     checkRequirement: () => AlchemyResources.all.every(x => x.amount >= Ra.alchemyResourceCap),
     checkEvent: GAME_EVENT.REALITY_RESET_AFTER,
     get reward() {
-      return `Synergism can go above ${formatPercents(1)} and Momentum increases ${formatX(10)} faster.`;
+      return `Momentum increases ${formatX(10)} faster. (this isn't very useful because momentum is already 1000x faster but oh well)`;
     },
     effect: 10,
   },
@@ -1326,7 +1326,7 @@ export const normalAchievements = [
     checkEvent: GAME_EVENT.INFINITY_CHALLENGE_COMPLETED,
     // Weirdly specific reward? Yes, its V's ST bonus because we forgot to disable it
     // when balancing Pelle and only realised too late.
-    get reward() { return `All Antimatter Dimensions are raised to ${formatPow(1.0812403840463596, 0, 3)}`; },
+    get reward() { return `All Antimatter Dimensions are raised to ${formatPow(1.0812403840463596, 0, 16)}.`; },
     effect: 1.0812403840463596
   },
   {

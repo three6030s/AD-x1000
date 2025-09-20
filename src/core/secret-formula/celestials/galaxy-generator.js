@@ -17,9 +17,9 @@ const rebuyable = config => {
 export const pelleGalaxyGeneratorUpgrades = {
   additive: rebuyable({
     id: "galaxyGeneratorAdditive",
-    description: "Increase base Galaxy generation by 2",
+    description: "Increase base Galaxy generation by 20",
     cost: x => Math.pow(3, x),
-    effect: x => x * 2,
+    effect: x => x * 20,
     formatEffect: x => `${format(x, 2, 2)}/s`,
     currency: () => Currency.galaxyGeneratorGalaxies,
     currencyLabel: "Galaxy"

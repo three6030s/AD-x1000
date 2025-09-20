@@ -294,7 +294,7 @@ export const Pelle = {
   },
 
   realityShardGain(remnants) {
-    return Decimal.pow(10, remnants ** (1 / 7.5) * 4).minus(1).div(1e3);
+    return Decimal.pow(10, remnants ** (1 / 7.5) * 4).minus(1); // Normally has a .div(1e3) at the end. This mod says "fuck you" to that
   },
 
   get realityShardGainPerSecond() {
@@ -307,7 +307,7 @@ export const Pelle = {
 
   // Calculations assume this is in units of proportion per second (eg. 0.03 is 3% drain per second)
   get riftDrainPercent() {
-    return 0.03;
+    return 0.3; // 30% because speed
   },
 
   get glyphMaxLevel() {

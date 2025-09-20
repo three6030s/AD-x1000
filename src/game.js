@@ -95,6 +95,7 @@ export function gainedInfinityPoints() {
     return Decimal.pow10(player.records.thisInfinity.maxAM.log10() / div - 0.75)
       .timesEffectsOf(PelleRifts.vacuum)
       .times(Pelle.specialGlyphEffect.infinity)
+      .times(1e3)
       .floor();
   }
   let ip = player.break
@@ -121,8 +122,10 @@ export function gainedInfinityPoints() {
 function totalEPMult() {
   return Pelle.isDisabled("EPMults")
     ? Pelle.specialGlyphEffect.time.timesEffectOf(PelleRifts.vacuum.milestones[2])
+    .times(1e3)
     : getAdjustedGlyphEffect("cursedEP")
       .times(ShopPurchase.EPPurchases.currentMult)
+      .times(1e3)
       .timesEffectsOf(
         EternityUpgrade.epMult,
         TimeStudy(61),
@@ -265,8 +268,11 @@ export function addRealityTime(time, realTime, rm, level, realities, ampFactor, 
 }
 
 export function gainedInfinities() {
-  if (EternityChallenge(4).isRunning || Pelle.isDisabled("InfinitiedMults")) {
+  if (EternityChallenge(4).isRunning) {
     return DC.D1;
+  }
+  if (Pelle.isDisabled("InfinitiedMults")) { // Normally EC4 and doomed reality are in the same line; this lets ec4 still disable infinity mults while cel7 retains x1000
+    return DC.E3;
   }
   let infGain = Effects.max(
     1,
@@ -281,6 +287,7 @@ export function gainedInfinities() {
     Achievement(164),
     Ra.unlocks.continuousTTBoost.effects.infinity
   );
+  infGain = infGain.times(1e3);
   infGain = infGain.times(getAdjustedGlyphEffect("infinityinfmult"));
   infGain = infGain.powEffectOf(SingularityMilestone.infinitiedPow);
   return infGain;
@@ -322,6 +329,9 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
   }
 
   let factor = 1;
+  if (Achievement(154).isUnlocked) {
+    factor *= 1e3;
+  }
   if (effects.includes(GAME_SPEED_EFFECT.BLACK_HOLE)) {
     if (BlackHoles.areNegative) {
       factor *= player.blackHoleNegative;
@@ -393,7 +403,7 @@ export function realTimeMechanics(realDiff) {
   // This is in order to prevent players from using time inside of Ra's reality for amplification as well
   Ra.memoryTick(realDiff, !Enslaved.isStoringRealTime);
   if (AlchemyResource.momentum.isUnlocked) {
-    player.celestials.ra.momentumTime += realDiff * Achievement(175).effectOrDefault(1);
+    player.celestials.ra.momentumTime += realDiff * Achievement(175).effectOrDefault(1) * 1e3;
   }
 
   DarkMatterDimensions.tick(realDiff);
@@ -667,7 +677,7 @@ function updatePrestigeRates() {
 function passivePrestigeGen() {
   let eternitiedGain = 0;
   if (RealityUpgrade(14).isBought) {
-    eternitiedGain = DC.D1.timesEffectsOf(
+    eternitiedGain = DC.D1.times(1e3).timesEffectsOf(
       Achievement(113),
       RealityUpgrade(3),
       RealityUpgrade(14)
@@ -685,7 +695,7 @@ function passivePrestigeGen() {
     if (BreakInfinityUpgrade.infinitiedGen.isBought) {
       // Multipliers are done this way to explicitly exclude ach87 and TS32
       infGen = infGen.plus(0.5 * Time.deltaTimeMs / Math.clampMin(50, player.records.bestInfinity.time));
-      infGen = infGen.timesEffectsOf(
+      infGen = infGen.times(1e3).timesEffectsOf(
         RealityUpgrade(5),
         RealityUpgrade(7),
         Ra.unlocks.continuousTTBoost.effects.infinity
@@ -757,7 +767,7 @@ function laitelaRealityTick(realDiff) {
         oldInfo.fastestCompletion === 3600 || oldInfo.fastestCompletion === 300 && oldInfo.difficultyTier > 0;
       completionText += `${firstAttempt ? "None" : TimeSpan.fromSeconds(oldInfo.fastestCompletion).toStringShort()} ➜
         ${destabilizing ? "Destabilized" : TimeSpan.fromSeconds(laitelaInfo.fastestCompletion).toStringShort()}
-        <br>Highest Active Dimension: ${destabilising ? `${formatInt(8 - oldInfo.difficultyTier)} ➜` : ""}
+        <br>Highest Active Dimension: ${destabilizing ? `${formatInt(8 - oldInfo.difficultyTier)} ➜` : ""}
         ${formatInt(8 - laitelaInfo.difficultyTier)}`;
       player.records.bestReality.laitelaSet = Glyphs.copyForRecords(Glyphs.active.filter(g => g !== null));
     } else {
@@ -1065,7 +1075,7 @@ export function browserCheck() {
 
 export function init() {
   // eslint-disable-next-line no-console
-  console.log("🌌 Antimatter Dimensions: Reality Update 🌌");
+  console.log("🌌 Antimatter Dimensions: x1000 Update 🌌");
   if (DEV) {
     // eslint-disable-next-line no-console
     console.log("👨‍💻 Development Mode 👩‍💻");

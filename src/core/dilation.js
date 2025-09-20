@@ -120,9 +120,11 @@ export function getDilationGainPerSecond() {
     return new Decimal(tachyonEffect)
       .timesEffectsOf(DilationUpgrade.dtGain, DilationUpgrade.dtGainPelle, DilationUpgrade.flatDilationMult)
       .times(ShopPurchase.dilatedTimePurchases.currentMult ** 0.5)
-      .times(Pelle.specialGlyphEffect.dilation).div(1e5);
+      .times(Pelle.specialGlyphEffect.dilation).div(1e5)
+      .times(1000);
   }
   let dtRate = new Decimal(Currency.tachyonParticles.value)
+    .times(1e3)
     .timesEffectsOf(
       DilationUpgrade.dtGain,
       Achievement(132),
@@ -142,9 +144,9 @@ export function getDilationGainPerSecond() {
 }
 
 export function tachyonGainMultiplier() {
-  if (Pelle.isDisabled("tpMults")) return new Decimal(1);
+  if (Pelle.isDisabled("tpMults")) return new Decimal(1e3);
   const pow = Enslaved.isRunning ? Enslaved.tachyonNerf : 1;
-  return DC.D1.timesEffectsOf(
+  return DC.D1.times(1e3).timesEffectsOf(
     DilationUpgrade.tachyonGain,
     GlyphSacrifice.dilation,
     Achievement(132),

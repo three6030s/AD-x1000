@@ -10,10 +10,10 @@ export const tabNotifications = {
         parent: "challenges",
         tab: "normal"
       },
-      {
+    /*  {
         parent: "statistics",
         tab: "multipliers"
-      }
+      } */
     ],
     condition: () => !PlayerProgress.realityUnlocked() &&
       !PlayerProgress.eternityUnlocked() &&
@@ -136,10 +136,10 @@ export const tabNotifications = {
   teresaUnlock: {
     id: 10,
     tabsToHighLight: [
-      {
+    /*  {
         parent: "celestials",
         tab: "celestial-navigation"
-      },
+      }, */
       {
         parent: "celestials",
         tab: "teresa"

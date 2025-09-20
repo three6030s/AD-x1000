@@ -81,8 +81,8 @@ function fastReplicantiBelow308(log10GainFactor, isAutobuyerActive) {
     Replicanti.galaxies.max - player.replicanti.galaxies));
   const maxUsedGain = gainNeededPerRG * toBuy + replicantiCap().log10() - Replicanti.amount.log10();
   const remainingGain = log10GainFactor.minus(maxUsedGain).clampMin(0);
-  Replicanti.amount = Decimal.pow10(replicantiExponent - gainNeededPerRG * toBuy)
-    .clampMax(replicantiCap());
+  if (!PelleUpgrade.replicantiGalaxyEM40.canBeApplied) Replicanti.amount =
+  Decimal.pow10(replicantiExponent - gainNeededPerRG * toBuy).clampMax(replicantiCap());
   addReplicantiGalaxies(toBuy);
   return remainingGain;
 }
@@ -132,6 +132,7 @@ export function totalReplicantiSpeedMult(overCap) {
   totalMult = totalMult.times(PelleRifts.decay.effectValue);
   totalMult = totalMult.times(Pelle.specialGlyphEffect.replication);
   totalMult = totalMult.times(ShopPurchase.replicantiPurchases.currentMult);
+  totalMult = totalMult.times(1e3);
   if (Pelle.isDisabled("replicantiIntervalMult")) return totalMult;
 
   const preCelestialEffects = Effects.product(

@@ -99,7 +99,7 @@ export function maxAllTimeDimensions() {
 }
 
 export function timeDimensionCommonMultiplier() {
-  let mult = new Decimal(ShopPurchase.allDimPurchases.currentMult)
+  let mult = new Decimal(ShopPurchase.allDimPurchases.currentMult).times(1e3)
     .timesEffectsOf(
       Achievement(105),
       Achievement(128),
@@ -198,7 +198,7 @@ class TimeDimensionState extends DimensionState {
   get multiplier() {
     const tier = this._tier;
 
-    if (EternityChallenge(11).isRunning) return DC.D1;
+    if (EternityChallenge(11).isRunning) return DC.E3;
     let mult = GameCache.timeDimensionCommonMultiplier.value
       .timesEffectsOf(
         tier === 1 ? TimeStudy(11) : null,
@@ -237,7 +237,7 @@ class TimeDimensionState extends DimensionState {
       return DC.D0;
     }
     if (EternityChallenge(11).isRunning) {
-      return this.amount;
+      return this.amount.times(1e3);
     }
     let production = this.amount.times(this.multiplier);
     if (EternityChallenge(7).isRunning) {

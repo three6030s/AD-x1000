@@ -170,7 +170,7 @@ export const eternityChallenges = [
   {
     id: 11,
     description: () => `all Dimension multipliers and powers are disabled except for the multipliers from
-      Infinity Power and Dimension Boosts (to Antimatter Dimensions). ${specialInfinityGlyphDisabledEffectText()}`,
+      this mod, Infinity Power, and Dimension Boosts (to Antimatter Dimensions). ${specialInfinityGlyphDisabledEffectText()}`,
     goal: DC.E450,
     pelleGoal: DC.E11200,
     goalIncrease: DC.E200,

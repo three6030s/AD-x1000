@@ -62,7 +62,7 @@ export default {
       </div>
       <div class="l-changelog-info">
         <div class="c-changelog-body--title">
-          {{ formatDate(shownEntry.date) }}<span v-if="shownEntry.name">: "{{ shownEntry.name }}" update</span>
+          {{ formatDate(shownEntry.date) }}<span v-if="shownEntry.name">: "{{ shownEntry.name }}"</span>
         </div>
         <div
           ref="changelogBody"

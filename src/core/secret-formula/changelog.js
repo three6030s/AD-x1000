@@ -8,6 +8,67 @@ export const changelog = [
    *  @property {function: @return String} info  Text body of information for the entry.
    * }
    */
+
+  {
+    date: [2025000, 9000, 20000],
+    name: "The x1000 Update",
+    info: `
+    i made this mod in like a few hours
+    <br>
+    <br>
+    <b>What <i>is</i> x1000:</b><br>
+    <ul>
+    <li>All Dimension multipliers (ADs get this twice!)</li>
+    <li>All prestige gains (Infinities, IP, etc.)</li>
+    <li>Replicanti, DT, and TP</li>
+    <li>Auto-EC speed</li>
+    <li>Glyph Sacrifice gain</li>
+    <li>Game speed (only once r154 is unlocked!)</li>
+    <li>Relic Shards</li>
+    <li>Memories, Memory Chunks, and Momentum buildup</li>
+    <li>Imaginary Machine generation</li>
+    <li>Dark Matter/Energy and Singularities</li>
+    <li>Reality Shards</li>
+    <li>Starting resources (e.g. SAM starts you with 5e133 AM)</li>
+    </ul>
+    <br>
+    <br>
+    Anything that <i>isn't</i> x1000 is due to it being way too powerful, me being lazy, or because I genuinely have no idea how to get to something.
+    I also just refuse to touch almost any challenge rewards, upgrades, studies, glyphs, etc etc etc. You can already beat the game in like 4 hours with what was changed.
+    (AD mults being well over ^10 isn't as fun as you think it is, after all...)
+    <br>
+    This mod idea initially started with me asking, "What if you had every shop multiplier at 1000x?"
+    This is why ADs get two stacks of x1000 instead of one.
+    It unfortunately wouldn't have much of an impact past cel4, and cel7 would still kinda suck because
+    the IP/EP multipliers aren't immune and the DT multiplier is ^0.5.
+    There's also just a lot of short timewalls everywhere (r35/76 without speedrun mode, ec1 unlock, r131, and so on)
+    so I decided it would be funnier (and dumber) if I just made a lot of things x1000 instead of just anything
+    you'd see in the shop. The multipliers aren't disabled in EC11 or cel7. Anyway, timewalls begone or something.
+    <br>
+    <br>
+    <b>Non-x1000 changes:</b><br>
+    <ul>
+    <li>The Multiplier Breakdown subtab is removed</li>
+    <li>Purchasing TT no longer requires a TD1 purchase</li>
+    <li>RM gain on Reality 1 is no longer capped at 1e8000 EP</li>
+    <li>Reality no longer requires 13 rows of Achievements</li>
+    <li>IDAS, REPAS, DAS, and DAB are all x3 stronger</li>
+    <li>Scour to Empower now unlocks at 10 Glyphs instead of 30</li>
+    <li>Real time is stored at 100% efficiency</li>
+    <li>Glyph Alchemy is much, much more efficient</li>
+    <li>Refinement value is x20 higher, matching the resource cap as long as it's 100% rarity</li>
+    <li>The cel7 ANR and r143 upgrades are combined into a single upgrade</li>
+    <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
+    <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
+    </ul>
+    <br>
+    Have fun.
+    <br>
+    `
+  },
+];
+
+/*
   {
     date: [2024, 8, 12],
     name: "Hi Ra",
@@ -1224,6 +1285,8 @@ gaining infinity points.</li>
 </ul>`
   }
 ];
+
+*/
 
 
 for (let i = 0; i < changelog.length; i++) {
