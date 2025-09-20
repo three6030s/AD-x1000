@@ -63,7 +63,7 @@ export const changelog = [
     <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
     </ul>
     <br>
-    Have fun.
+    Have fun. \uE010
     <br>
     `
   },
