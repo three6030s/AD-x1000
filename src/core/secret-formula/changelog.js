@@ -27,7 +27,7 @@ export const changelog = [
     <li>Relic Shards</li>
     <li>Memories, Memory Chunks, and Momentum buildup</li>
     <li>Imaginary Machine generation</li>
-    <li>Dark Matter/Energy and Singularities</li>
+    <li>Dark Matter/Energy, Singularities, and Annihilation multiplier gain</li>
     <li>Reality Shards</li>
     <li>Starting resources (e.g. SAM starts you with 5e133 AM)</li>
     </ul>
@@ -41,7 +41,7 @@ export const changelog = [
     This is why ADs get two stacks of x1000 instead of one.
     It unfortunately wouldn't have much of an impact past cel4, and cel7 would still kinda suck because
     the IP/EP multipliers aren't immune and the DT multiplier is ^0.5.
-    There's also just a lot of short timewalls everywhere (r35/76 without speedrun mode, ec1 unlock, r131, and so on)
+    There's also just timewalls of all varieties (r35/76 without speedrun mode, ec1 unlock, r131, and so on)
     so I decided it would be funnier (and dumber) if I just made a lot of things x1000 instead of just anything
     you'd see in the shop. The multipliers aren't disabled in EC11 or cel7. Anyway, timewalls begone or something.
     <br>
@@ -61,6 +61,7 @@ export const changelog = [
     <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
     <li>Rifts and the Galaxy Generator drain 30% of something instead of 3%</li>
     <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
+    <li>Speedrun Mode's unlock requirement is removed (you still have to import "speedrun")</li>
     </ul>
     <br>
     Have fun. \uE010

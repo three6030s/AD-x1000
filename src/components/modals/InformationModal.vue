@@ -20,8 +20,9 @@ export default {
       </div>
     </div>
     <div class="c-info-body">
-      Antimatter Dimensions is an Idle Incremental game created by Finnish developer Hevipelle. Originating as a solo
-      project in 2016, it was expanded upon by a large team of developers and testers from then on.
+      Antimatter Dimensions is an Active Incremental game created by (not) Finnish developer 6030. Originating as a solo
+      project by Hevipelle in 2016, it was expanded upon by a large team of developers and testers from then on, and then
+      made horribly unbalanced.
       <br>
       <br>
       The game has unfolding gameplay and multiple prestige layers. The "How to Play" button contains useful
@@ -31,27 +32,7 @@ export default {
       <InformationModalButton
         name="GitHub repository"
         icon="fa-brands fa-github"
-        link="https://github.com/IvarK/AntimatterDimensionsSourceCode"
-      />
-      <InformationModalButton
-        name="r/AntimatterDimensions"
-        icon="fa-brands fa-reddit-alien"
-        link="https://www.reddit.com/r/AntimatterDimensions/"
-      />
-      <InformationModalButton
-        name="Antimatter Dimensions Discord Server"
-        icon="fa-brands fa-discord"
-        link="https://discord.gg/ST9NaXa"
-      />
-      <InformationModalButton
-        name="Antimatter Dimensions on Google Play"
-        icon="fa-brands fa-google-play"
-        link="https://play.google.com/store/apps/details?id=kajfosz.antimatterdimensions"
-      />
-      <InformationModalButton
-        name="Antimatter Dimensions on Steam"
-        icon="fa-brands fa-steam"
-        link="https://store.steampowered.com/app/1399720/Antimatter_Dimensions/"
+        link="https://github.com/three6030s/AD-x1000"
       />
       <InformationModalButton
         name="Credits"
