@@ -1,4 +1,4 @@
-name: Deploy release
+name: Deploy 🚀
 
 env:
   FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
@@ -6,10 +6,10 @@ env:
 on:
   push:
     branches:
-      - release
+      - main
   workflow_dispatch:
     branches:
-      - release
+      - main
 
 jobs:
   build:
@@ -19,16 +19,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           lfs: true
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm run build:release
+      - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GH_PUBLISH_TOKEN }}
-          repository-name: IvarK/AntimatterDimensions
-          branch: master
+          branch: gh-pages
           folder: dist
           single-commit: true
