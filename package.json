@@ -10,7 +10,7 @@
     "preview": "vite build && vite preview",
     "lint": "eslint --ext .js,.vue --fix src",
     "stylelint": "stylelint \"**/*.css\" --fix",
-    "deploy": "npm run build:release && main -d dist"
+    "deploy": "npm run build:release && gh-pages -d dist"
   },
   "dependencies": {
     "@antimatter-dimensions/notations": "^3.1.0",
