@@ -59,6 +59,7 @@ export const changelog = [
     <li>Refinement value is x20 higher, matching the resource cap as long as it's 100% rarity</li>
     <li>The cel7 ANR and r143 upgrades are combined into a single upgrade</li>
     <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
+    <li>Rifts and the Galaxy Generator drain 30% of something instead of 3%</li>
     <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
     </ul>
     <br>
