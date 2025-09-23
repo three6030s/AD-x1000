@@ -91,7 +91,7 @@ export const breakInfinityUpgrades = {
   autobuyMaxDimboosts: {
     id: "autobuyMaxDimboosts",
     cost: 5e9,
-    description: "Unlock the buy max Dimension Boost Autobuyer mode"
+    description: "Unlock the buy max Dimension Boost and Antimatter Galaxies Autobuyer modes"
   },
   autobuyerSpeed: {
     id: "autoBuyerUpgrade",

@@ -49,6 +49,7 @@ export const changelog = [
     <b>Non-x1000 changes:</b><br>
     <ul>
     <li>The Multiplier Breakdown subtab is removed</li>
+    <li>The Dimboost bulk upgrade also unlocks Galaxy bulk</li>
     <li>Purchasing TT no longer requires a TD1 purchase</li>
     <li>RM gain on Reality 1 is no longer capped at 1e8000 EP</li>
     <li>Reality no longer requires 13 rows of Achievements</li>
