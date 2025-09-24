@@ -36,7 +36,11 @@ export const changelog = [
     <b>Non-x1000 changes:</b><br>
     <ul>
     <li>The news can scroll at 1000% speed</li>
+    <li>You can send me news message submissions and I'll likely add them</li>
+    <li>Don't send them in the mod post though, it'll give away the secret</li>
+    <li>Nobody reads the changelog anyway, so it's our little secret :)</li>
     <li>The Multiplier Breakdown subtab is removed</li>
+    <li>The cap on antimatter gain in NCs is significantly increased, effectively copying how you can get r125 more easily on Android</li>
     <li>The Dimboost bulk upgrade also unlocks Galaxy bulk</li>
     <li>Purchasing TT no longer requires a TD1 purchase</li>
     <li>The issues with r118 have been fixed</li>
@@ -54,6 +58,7 @@ export const changelog = [
     <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
     <li>Speedrun Mode's unlock requirement is removed (you still have to import "speedrun")</li>
     <li>(Due to unknown bugs, importing old saves might not work. Past speedruns and speedrun info also can't be seen.)</li>
+    <li>I might have missed something. Tell me if you notice a change that I didn't mention.</li>
     </ul>
     <br>
     <br>

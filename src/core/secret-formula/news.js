@@ -3,6 +3,7 @@
 // R = random chance condition
 // P = patreon
 // AI = created with gpt2
+// M = exclusive to the mod; 1-999 are for me, 1000+ are for everyone else
 
 function newsAnimSpd(seconds) {
   return seconds / player.options.news.speed;
@@ -10,6 +11,19 @@ function newsAnimSpd(seconds) {
 
 
 export const news = [
+  {
+    id: "m1",
+    text: "A new news message appears!",
+  },
+
+  // m1-999 are reserved for my own news messages; m1000 and beyond are reserved for user-submitted news messages
+
+  {
+    id: "m1000",
+    text: "ERROR M1000: Player-submitted news message not found.", // TODO: Get someone to submit a news message, which will replace this
+  },
+
+
   {
     id: "a1",
     text: "The cookie is a lie.",

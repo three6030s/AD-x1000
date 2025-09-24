@@ -3,6 +3,7 @@ export const normalAchievements = [
     id: 11,
     name: "You gotta start somewhere",
     description: "Buy a 1st Antimatter Dimension.",
+    get reward() { return `Make sure this mod doesn't get on the wiki.` },
   },
   {
     id: 12,
