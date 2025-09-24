@@ -78,7 +78,7 @@ function fastReplicantiBelow308(log10GainFactor, isAutobuyerActive) {
   const gainNeededPerRG = Decimal.NUMBER_MAX_VALUE.log10();
   const replicantiExponent = log10GainFactor.toNumber() + Replicanti.amount.log10();
   const toBuy = PelleUpgrade.replicantiGalaxyEM40.canBeApplied
-  ? Math.floor(Replcanti.galaxies.max - player.replicanti.galaxies)
+  ? Math.floor(Replicanti.galaxies.max - player.replicanti.galaxies)
   : Math.floor(Math.min(replicantiExponent / gainNeededPerRG, Replicanti.galaxies.max - player.replicanti.galaxies));
   const maxUsedGain = gainNeededPerRG * toBuy + replicantiCap().log10() - Replicanti.amount.log10();
   const remainingGain = log10GainFactor.minus(maxUsedGain).clampMin(0);
