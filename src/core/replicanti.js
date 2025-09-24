@@ -567,6 +567,7 @@ export const Replicanti = {
       if (Achievement(126).isUnlocked) {
         const maxGain = Replicanti.galaxies.max - player.replicanti.galaxies;
         const logReplicanti = Replicanti.amount.log10();
+        if (PelleUpgrade.replicantiGalaxyEM40.canBeApplied) return maxGain;
         return Math.min(maxGain, Math.floor(logReplicanti / LOG10_MAX_VALUE));
       }
       return 1;

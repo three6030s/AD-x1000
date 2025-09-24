@@ -10,10 +10,10 @@ export const changelog = [
    */
 
   {
-    date: [2025000, 9000, 20000],
+    date: [2025000, 9000, 23000],
     name: "The x1000 Update",
     info: `
-    i made this mod in like a few hours
+    i couldve made this mod in like a few hours but i kept adding and fixing things so this took a few days
     <br>
     <br>
     <b>What <i>is</i> x1000:</b><br>
@@ -33,8 +33,32 @@ export const changelog = [
     </ul>
     <br>
     <br>
+    <b>Non-x1000 changes:</b><br>
+    <ul>
+    <li>The news can scroll at 1000% speed</li>
+    <li>The Multiplier Breakdown subtab is removed</li>
+    <li>The Dimboost bulk upgrade also unlocks Galaxy bulk</li>
+    <li>Purchasing TT no longer requires a TD1 purchase</li>
+    <li>The issues with r118 have been fixed</li>
+    <li>RM gain on Reality 1 is no longer capped at 1e8000 EP</li>
+    <li>Reality no longer requires 13 rows of Achievements</li>
+    <li>IDAS, REPAS, DAS, and DAB are all x3 stronger</li>
+    <li>Scour to Empower now unlocks at 10 Glyphs instead of 30</li>
+    <li>Real time is stored at 100% efficiency</li>
+    <li>Glyph Alchemy is much, much more efficient</li>
+    <li>Refinement value is x20 higher, matching the resource cap as long as it's 100% rarity</li>
+    <li>Game speed in cel6 comes back x10 faster</li>
+    <li>The cel7 ANR and r143 upgrades are combined into a single upgrade</li>
+    <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
+    <li>Rifts and the Galaxy Generator drain 30% of something instead of 3%</li>
+    <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
+    <li>Speedrun Mode's unlock requirement is removed (you still have to import "speedrun")</li>
+    <li>(Due to unknown bugs, importing old saves might not work. Past speedruns and speedrun info also can't be seen.)</li>
+    </ul>
+    <br>
+    <br>
     Anything that <i>isn't</i> x1000 is due to it being way too powerful, me being lazy, or because I genuinely have no idea how to get to something.
-    I also just refuse to touch almost any challenge rewards, upgrades, studies, glyphs, etc etc etc. You can already beat the game in like 4 hours with what was changed.
+    I also just refuse to touch almost any challenge rewards, upgrades, studies, glyphs, etc etc etc. You can already beat the game in under 3 hours with what was changed.
     (AD mults being well over ^10 isn't as fun as you think it is, after all...)
     <br>
     This mod idea initially started with me asking, "What if you had every shop multiplier at 1000x?"
@@ -44,26 +68,6 @@ export const changelog = [
     There's also just timewalls of all varieties (r35/76 without speedrun mode, ec1 unlock, r131, and so on)
     so I decided it would be funnier (and dumber) if I just made a lot of things x1000 instead of just anything
     you'd see in the shop. The multipliers aren't disabled in EC11 or cel7. Anyway, timewalls begone or something.
-    <br>
-    <br>
-    <b>Non-x1000 changes:</b><br>
-    <ul>
-    <li>The Multiplier Breakdown subtab is removed</li>
-    <li>The Dimboost bulk upgrade also unlocks Galaxy bulk</li>
-    <li>Purchasing TT no longer requires a TD1 purchase</li>
-    <li>RM gain on Reality 1 is no longer capped at 1e8000 EP</li>
-    <li>Reality no longer requires 13 rows of Achievements</li>
-    <li>IDAS, REPAS, DAS, and DAB are all x3 stronger</li>
-    <li>Scour to Empower now unlocks at 10 Glyphs instead of 30</li>
-    <li>Real time is stored at 100% efficiency</li>
-    <li>Glyph Alchemy is much, much more efficient</li>
-    <li>Refinement value is x20 higher, matching the resource cap as long as it's 100% rarity</li>
-    <li>The cel7 ANR and r143 upgrades are combined into a single upgrade</li>
-    <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
-    <li>Rifts and the Galaxy Generator drain 30% of something instead of 3%</li>
-    <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
-    <li>Speedrun Mode's unlock requirement is removed (you still have to import "speedrun")</li>
-    </ul>
     <br>
     Have fun. \uE010
     <br>

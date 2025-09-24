@@ -140,7 +140,7 @@ export const tabs = [
         name: "Speedrun Records",
         symbol: "<i class='fas fa-ranking-star'></i>",
         component: "PreviousSpeedrunTab",
-        condition: () => false && Object.keys(player.speedrun.previousRuns).length > 0,
+        condition: () => false,
         id: 6,
         hidable: true,
       },
