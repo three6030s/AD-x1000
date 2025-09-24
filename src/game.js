@@ -368,7 +368,7 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
     if (Effarig.isRunning) {
       factor = Effarig.multiplier(factor).toNumber();
     } else if (Laitela.isRunning) {
-      const nerfModifier = Math.clampMax(Time.thisRealityRealTime.totalMinutes / 10, 1);
+      const nerfModifier = Math.clampMax(Time.thisRealityRealTime.totalMinutes, 1);
       factor = Math.pow(factor, nerfModifier);
     }
   }

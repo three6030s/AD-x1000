@@ -97,7 +97,7 @@ GameDatabase.celestials.descriptions = [
         : `Production from ${disabledDims} is disabled.`;
 
       return `Infinity Point and Eternity Point gain are Dilated.
-      Game speed is reduced to ${formatInt(1)} and gradually comes back over ${formatInt(10)} minutes.
+      Game speed is reduced to ${formatInt(1)} and gradually comes back over ${formatInt(1)} minute.
       Black Hole storing, discharging, pulsing, and inversion are all disabled.
       ${disabledText}`;
     },

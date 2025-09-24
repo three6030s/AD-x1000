@@ -18,15 +18,15 @@ export default {
   },
   computed: {
     sampleNums() {
-      const largestExponent = "123456789012345";
+      const largestExponent = "1234567890123456";
       const numbers = [];
-      for (let digits = 4; digits < 16; digits++) numbers.push(Decimal.pow10(largestExponent.substring(0, digits)));
+      for (let digits = 4; digits < 17; digits++) numbers.push(Decimal.pow10(largestExponent.substring(0, digits)));
       return numbers;
     },
     sliderProps() {
       return {
         min: 3,
-        max: 15,
+        max: 16,
         interval: 1,
         width: "100%",
         tooltip: false
