@@ -1076,7 +1076,7 @@ export function browserCheck() {
 export function init() {
   // eslint-disable-next-line no-console
   console.log("🌌 Antimatter Dimensions: x1000 Update 🌌");
-  console.log("Current Version: 0.901 (pre-release)");
+  console.log("Current Version: 1.000");
   if (DEV) {
     // eslint-disable-next-line no-console
     console.log("👨‍💻 Development Mode 👩‍💻");

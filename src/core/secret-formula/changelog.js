@@ -10,10 +10,12 @@ export const changelog = [
    */
 
   {
-    date: [2025000, 9000, 23000],
+    date: [2025000, 9000, 29000],
     name: "The x1000 Update",
     info: `
-    i couldve made this mod in like a few hours but i kept adding and fixing things so this took a few days
+    i couldve made this mod in like a few hours but i kept adding and fixing things so this took over a week
+    <br>
+    also keep this mod off of the wiki because, uhh, yes
     <br>
     <br>
     <b>What <i>is</i> x1000:</b><br>
@@ -35,20 +37,21 @@ export const changelog = [
     <br>
     <b>Non-x1000 changes:</b><br>
     <ul>
+    <li>The sliders for exponent notation go up to 16 digits</li>
     <li>The news can scroll at 1000% speed</li>
-    <li>You can send me news message submissions and I'll likely add them</li>
-    <li>Don't send them in the mod post though, it'll give away the secret</li>
-    <li>Nobody reads the changelog anyway, so it's our little secret :)</li>
     <li>The Multiplier Breakdown subtab is removed</li>
     <li>The cap on antimatter gain in NCs is significantly increased, effectively copying how you can get r125 more easily on Android</li>
     <li>The Dimboost bulk upgrade also unlocks Galaxy bulk</li>
     <li>Purchasing TT no longer requires a TD1 purchase</li>
     <li>The issues with r118 have been fixed</li>
     <li>RM gain on Reality 1 is no longer capped at 1e8000 EP</li>
+    <li>You can send me news message submissions and I might add them</li>
+    <li>Don't send them in the mod post though, we don't want that</li>
+    <li>Nobody reads the changelog anyway, so it's our little secret ;)</li>
     <li>Reality no longer requires 13 rows of Achievements</li>
     <li>IDAS, REPAS, DAS, and DAB are all x3 stronger</li>
     <li>Scour to Empower now unlocks at 10 Glyphs instead of 30</li>
-    <li>Real time is stored at 100% efficiency</li>
+    <li>Real time is stored at 100% efficiency (this isn't very useful...)</li>
     <li>Glyph Alchemy is much, much more efficient</li>
     <li>Refinement value is x20 higher, matching the resource cap as long as it's 100% rarity</li>
     <li>Game speed in cel6 comes back x10 faster</li>
@@ -56,6 +59,7 @@ export const changelog = [
     <li>The cel7 EM40 upgrade also doesn't reset your Replicanti</li>
     <li>Rifts and the Galaxy Generator drain 30% of something instead of 3%</li>
     <li>The Galaxy Generator's additive generation upgrade is x10 stronger</li>
+    <li>The credits are a <i>lot</i> shorter; the music used is different because of this</li>
     <li>Speedrun Mode's unlock requirement is removed (you still have to import "speedrun")</li>
     <li>(Due to unknown bugs, importing old saves might not work. Past speedruns and speedrun info also can't be seen.)</li>
     <li>I might have missed something. Tell me if you notice a change that I didn't mention.</li>

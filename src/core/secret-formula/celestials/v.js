@@ -216,10 +216,10 @@ export const v = {
       reward: "Achievement multiplier reduces Auto-EC completion time.",
       description: () => `Have ${formatInt(10)} V-Achievements`,
       effect: () => Achievements.power,
-      // Base rate is 60 ECs at 20 minutes each
+      // Base rate is 60 ECs at 1.2 seconds each
       format: x => (Ra.unlocks.instantECAndRealityUpgradeAutobuyers.canBeApplied
         ? "Instant (Ra upgrade)"
-        : `${TimeSpan.fromMinutes(60 * 20 / x).toStringShort()} for full completion`),
+        : `${TimeSpan.fromMinutes(1.2 / x).toStringShort()} for full completion`),
       requirement: () => V.spaceTheorems >= 10
     },
     autoAutoClean: {

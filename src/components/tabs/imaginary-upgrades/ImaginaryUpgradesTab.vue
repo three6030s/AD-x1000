@@ -47,7 +47,7 @@ export default {
       Imaginary Machines are gained passively over time up to the cap, but gain slows down exponentially
       as you approach the cap.
       <br>
-      Every {{ formatInt(scaleTime) }} seconds the difference in iM between your current amount and the cap
+      Every {{ formatInt(scaleTime*1000) }} milliseconds the difference in iM between your current amount and the cap
       will be cut in half.
       <br>
       <br>
